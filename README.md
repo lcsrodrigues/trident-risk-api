@@ -112,6 +112,13 @@ uvicorn app.main:app --reload --port 8000
 
 Acesse: http://localhost:8000/docs
 
+### Em caso de falha persistente no Render
+No dashboard do Render, você pode configurar manualmente:
+Build Command: pip install --upgrade pip && pip install -r requirements.txt
+Start Command: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+E nas Environment Variables, adicione:
+PYTHON_VERSION = 3.11.7
+
 ## Estrutura do Projeto
 
 ```
